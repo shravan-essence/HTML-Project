@@ -1,0 +1,256 @@
+.container {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.nav ul{
+	list-style: none;
+	padding:0;
+	margin-top: 10px;/*
+	position: absolute;*/
+
+}
+
+nav {
+	width: 100%;
+
+}
+
+nav ul li {
+	float: left;
+	display: flex;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	padding: 10px 10px;
+	font-weight: bolder; 
+}
+
+nav ul .nav-right {
+ 	float: right;
+}
+
+.dropdown-profile a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-profile a:first-child {
+	margin-top: 40px;
+}
+.dropdown-profile {
+	display: none;
+	position: absolute;
+	min-width: 200px;
+	z-index: 1;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-profile {
+	display: block;
+}
+
+.dropdown-profile a:hover {
+	background-color: black;
+	color: white;
+}
+
+li:not(:first-child) a:hover {
+	color: white;
+	background-color: black;
+	opacity: 0.8;
+}
+
+.intro {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	left: 0px;
+	background: #043873;
+}
+
+.welcome {
+	margin: 125px 0;
+	color: white;
+	text-transform: capitalize;
+}
+
+
+.welcome img {
+	width:100%;
+	height: 500px;
+}
+
+.welcome h1{
+	margin-top: 80px;
+	margin-right: 10px;
+}
+
+.welcome h1 {
+	font-size: 56px;
+}
+.welcome p {
+	margin-top: 40px;
+}
+.welcome button {
+	margin-top: 40px;
+}
+
+.title {
+	margin: 150px 0;
+}
+.title .col-5 img {
+	width:100%;
+	height: 400px;
+}
+
+.work-together {
+	margin-top: 150px;
+	margin-bottom: 200px;
+}
+
+.work-together h1 {
+	margin-top: 100px;
+}
+
+.extension {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	left: 0px;
+	background: #043873;
+}
+
+.extension-section {
+	margin: 200px 0;
+	color: white;
+}
+
+.extension-section h1 {
+	margin-top: 100px;
+}
+
+.plan-title {
+	text-align: center;
+	margin-bottom: 500px ;
+}
+
+.plan-title h1 {
+	font-size: 50px;
+	font-weight: bolder;
+}
+.plan-title p {
+	font-size: 20px;
+	margin:0 100px;
+}
+
+.extension-work {
+	margin:250px 0;
+	color: white;
+	text-align: center;
+}
+
+.extension-work h1 {
+	font-size: 64px;
+}
+
+.extension-work p {
+	margin-right:190px ;
+	margin-left: 190px;
+}
+
+.sponsors {
+	margin: 300px 0;
+}
+
+.sponsors h1 {
+	text-align: center;
+	font-size: 54px;
+}
+
+.sponsors .row{
+	margin: 80px 0;
+}
+
+.sponsors .col-3:last-child{
+	text-align: right;
+}
+
+.favorite {
+	margin: 200px 0;
+	color: white;
+}
+
+.favorite h1 {
+	margin-left: 40px;
+	font-size: 64px;
+}
+.favorite p {
+	margin-left: 40px ;
+}
+.favorite button {
+	margin-left: 40px ;
+} 
+
+.clients-feedback {
+	margin: 200px 0;
+}
+
+.clients-feedback h1{
+	text-align: center;
+	font-size: 64px;
+}
+
+.footer-info {
+	margin: 100px 400px;
+	text-align: center;
+	color: white;
+}
+
+.footer-info h1 {
+	font-size: 64px;
+}
+
+.footer-info p {
+	margin-top: 30px;
+	line-height: 5px;
+	font-size: 18px;
+}
+
+.footer-info button {
+	margin: 30px 0;
+}
+.footer {
+	color: white;
+	margin-top: 150px;
+	margin-bottom: 100px;
+	line-height: 30px;
+}
+
+.footer ul {
+	list-style: none;
+	text-transform: capitalize;
+}
+
+.footer-titlePara {
+	margin-right: 90px ;
+}
+
+.footer .row {
+	margin-bottom: 50px;
+}
+
+.footer-list li{
+	list-style: none;
+	display: inline;
+	padding-right: 40px;
+}
+
+.footer-list ul:first-child{
+	margin-left:0 ;
+	padding-left: 0;
+}
+
