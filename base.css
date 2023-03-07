@@ -226,7 +226,7 @@ li:not(:first-child) a:hover {
 .footer {
 	color: white;
 	margin-top: 150px;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	line-height: 30px;
 }
 
