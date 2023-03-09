@@ -1,50 +1,67 @@
-.container {
-	margin-left: 20px;
-	margin-right: 20px;
-}
-
 .nav ul{
 	list-style: none;
 	padding:0;
-	margin-top: 10px;/*
-	position: absolute;*/
-
+	margin-top: 10px;
 }
 
 nav {
 	width: 100%;
-
 }
 
 nav ul li {
-	float: left;
-	display: flex;
+	margin-top: 20px;
+	display: inline-block;
 }
 
 nav ul li a {
 	text-decoration: none;
 	color: white;
-	padding: 10px 10px;
-	font-weight: bolder; 
+	padding: 10px 15px;
+	font-size: 18px; 
 }
 
-nav ul .nav-right {
- 	float: right;
+nav ul li a i {
+	margin-left: 10px;
+}
+
+nav ul li img {
+	margin-right: 140px;
+}
+
+nav ul li button {
+	padding: 16px 30px;
+	color: black;
+	background: #FFE492;
+	border: none;
+	font-size: 18px;
+	border-radius: 3px;
+	margin-left: 10px;
+}
+
+.btnTry {
+	border: none;
+	border-radius: 8px;
+	background-color: #4F9CF9;
+	color: white;
+	font-size: 18px;
+	margin-left: 5px;
+	padding: 16px 24px;
+}
+
+.btnTry i {
+	margin-left: 10px;
 }
 
 .dropdown-profile a {
-  padding: 12px 16px;
   text-decoration: none;
   display: block;
+  min-width: 200px;
   text-align: left;
 }
-.dropdown-profile a:first-child {
-	margin-top: 40px;
-}
+
 .dropdown-profile {
 	display: none;
 	position: absolute;
-	min-width: 200px;
 	z-index: 1;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
@@ -58,10 +75,19 @@ nav ul .nav-right {
 	color: white;
 }
 
-li:not(:first-child) a:hover {
-	color: white;
-	background-color: black;
-	opacity: 0.8;
+div.yellow {
+	position: relative;
+}
+
+div.yellow img {
+	position: absolute;
+	left: -10%;
+	right: -1%;
+	top: 30.43%;
+	width: 700px;
+	height: 80px;
+	z-index: -1;
+	transform: matrix(1, 0, 0.01, 1, 0, 0);
 }
 
 .intro {
@@ -78,7 +104,6 @@ li:not(:first-child) a:hover {
 	text-transform: capitalize;
 }
 
-
 .welcome img {
 	width:100%;
 	height: 500px;
@@ -90,21 +115,29 @@ li:not(:first-child) a:hover {
 }
 
 .welcome h1 {
-	font-size: 56px;
+	font-size: 64px;
 }
+
 .welcome p {
-	margin-top: 40px;
+	margin: 40px 0;
 }
+
 .welcome button {
-	margin-top: 40px;
+	margin-left: 0;
 }
 
 .title {
 	margin: 150px 0;
 }
-.title .col-5 img {
-	width:100%;
+
+.title img {
+	margin-left: 40px;
+	width:90%;
 	height: 400px;
+}
+
+.title h1 {
+	font-size: 72px;
 }
 
 .work-together {
@@ -114,6 +147,19 @@ li:not(:first-child) a:hover {
 
 .work-together h1 {
 	margin-top: 100px;
+	font-size: 72px;
+	margin-left: 40px;
+}
+
+.work-together img {
+	margin-left: 0;
+	width:100%;
+	height: 100%;
+}
+
+
+.work-together button {
+	margin-left: 40px;
 }
 
 .extension {
@@ -130,21 +176,44 @@ li:not(:first-child) a:hover {
 }
 
 .extension-section h1 {
+	font-size: 72px;
 	margin-top: 100px;
+}
+
+.extension-section p {
+	margin-left: 0;
+	margin-right: 25px;
+}
+
+.extension-section img {
+	width:100%;
+	height: 100%;
 }
 
 .plan-title {
 	text-align: center;
-	margin-bottom: 500px ;
+	margin-bottom: 100px ;
 }
 
 .plan-title h1 {
-	font-size: 50px;
-	font-weight: bolder;
+	font-size: 72px;
 }
+
 .plan-title p {
 	font-size: 20px;
 	margin:0 100px;
+}
+
+.plan-details {
+	margin-bottom: 100px;
+}
+
+.plan-details ul{
+	list-style: none;
+}
+
+.plan-details .card {
+	border: 1px solid #FFE492;
 }
 
 .extension-work {
@@ -154,16 +223,46 @@ li:not(:first-child) a:hover {
 }
 
 .extension-work h1 {
-	font-size: 64px;
+	font-size: 72px;
 }
 
 .extension-work p {
-	margin-right:190px ;
-	margin-left: 190px;
+	margin: 0 150px;
+}
+
+.extension-work button {
+	margin: 50px 0;
+}
+
+.customize {
+	margin: 200px 0;
+}
+
+.customize h1,p,button {
+	margin-top: 50px;
+}
+
+.customize h1 {
+	font-size: 72px;
+	margin-left: 50px;
+}
+
+.customize p {
+	margin-left: 50px;
+}
+
+.customize  img {
+	margin-left: 0;
+	width:100%;
+	height: 100%;
+}
+
+.customize button {
+	margin-left: 50px;
 }
 
 .sponsors {
-	margin: 300px 0;
+	margin: 200px 0;
 }
 
 .sponsors h1 {
@@ -172,11 +271,7 @@ li:not(:first-child) a:hover {
 }
 
 .sponsors .row{
-	margin: 80px 0;
-}
-
-.sponsors .col-3:last-child{
-	text-align: right;
+	margin: 100px 0;
 }
 
 .favorite {
@@ -185,18 +280,25 @@ li:not(:first-child) a:hover {
 }
 
 .favorite h1 {
-	margin-left: 40px;
+	margin-left: 100px;
 	font-size: 64px;
 }
+
 .favorite p {
-	margin-left: 40px ;
+	margin-left: 100px ;
 }
+
 .favorite button {
-	margin-left: 40px ;
+	margin-left: 100px ;
+}
+
+.favorite img {
+	width: 100%;
+	height: 100%;
 } 
 
 .clients-feedback {
-	margin: 200px 0;
+	margin: 100px 0;
 }
 
 .clients-feedback h1{
@@ -204,8 +306,32 @@ li:not(:first-child) a:hover {
 	font-size: 64px;
 }
 
+.clients-feedback .feedback {
+	margin: 30px 0;
+}
+
+.clients-feedback .feedback .card {
+	background-color: #4F9CF9;
+	color: white;
+	border: none;
+	padding: 30px 0;
+}
+
+div.clients img {
+	border-radius: 50px;
+	height: 90px;
+	width: 90px;
+
+}
+
+div.clients h4,div.clients p {
+	margin-left: 20px;	
+}
+
+div.clients h4 {
+	color: #043873;
+}
 .footer-info {
-	margin: 100px 400px;
 	text-align: center;
 	color: white;
 }
@@ -220,9 +346,7 @@ li:not(:first-child) a:hover {
 	font-size: 18px;
 }
 
-.footer-info button {
-	margin: 30px 0;
-}
+
 .footer {
 	color: white;
 	margin-top: 150px;
@@ -237,6 +361,7 @@ li:not(:first-child) a:hover {
 
 .footer-titlePara {
 	margin-right: 90px ;
+	margin-left: 0;
 }
 
 .footer .row {
@@ -254,14 +379,63 @@ li:not(:first-child) a:hover {
 	padding-left: 0;
 }
 
-span.credits {
-    background: url(Images/arrow-right.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    display: inline-block;
-    height: 15px;
-    width: 20px;
-    margin-left: 5px;
-    color: white;
+.card .card-title {
+	font-size: 24px;
+}
+
+.card .card-title1 {
+	margin: 30px 0;
+	font-size: 36px;
+}
+
+.card .card-body{
+	margin: 20px;
+}
+
+.card .card-body img{
+	margin-right: 15px;
+}
+
+.plan-details .card .card-body p{
+	margin-right: 15px;
+	margin-left: 0;
+}
+
+div.selected {
+	background: #043873;
+	color: white;
+	height: 675px;
+	top: -40px;
+
+}
+
+a.selected {
+	background: #4F9CF9;
+	border: none;
+	text-decoration: none;
+	padding: 10px 14px;
+	border-radius: 4px;
+	color: white;
+}
+
+a.btn {
+	border: 1px solid #FFE492;
+}
+
+div.selected .card-title1,img {
+	color: #FFE492;
+}
+
+.feedback div.card.feedback-selected {
+	background-color: white;
+	color: black;
+	box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+.feedback .card-body hr {
+	margin: 40px 0;
+}
+
+.feedback .slider .card {
+	margin: 0 20px;
 }
