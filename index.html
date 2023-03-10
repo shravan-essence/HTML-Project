@@ -21,34 +21,41 @@
 	<!--JQuery Slick  css plugin CDN link-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
 </head>
 <body>
 	<div class="intro">
-		<div class="container">
-			<nav class="nav text-uppercase">
+		<div class="container-xxl" id="con">
+			<nav class="nav text-uppercase" id="myTopnav">
 				<ul>
-					<li><img src="Images/Logo.png"></li>
+					<img src="Images/Logo.png">
 					<li><a href="index.html">products<i class="bi bi-chevron-down"></i></a></li>
 					<li><a href="#about">solutions<i class="bi bi-chevron-down"></i></a></li>
 					<li><a href="#contact">resources<i class="bi bi-chevron-down"></i></a></li>
-						<li class="dropdown"><a href="#" class="dropbtn" data-bs-toggle="dropdown" id="profilebtn">pricing<i class="bi bi-chevron-down"></i></a>
-							<div class="dropdown-profile">
-								<a href="#" id="profile-btn">Change Profile</a>
-								<a data-toggle="modal" href="#usernameModal" id="usernamebtn">Change Username</a>
-								<a data-toggle="modal" href="#passwordModal" id="passwordbtn">Change Password</a>
-							</div>
-						</li>
-					<li><button type="submit" >Login</button></li>
-					<li><button type="submit" class="btnTry ">Try Whitepace free<i class="bi bi-arrow-right"></i></button></li>
+					<li class="dropdown"><a href="#" class="dropbtn" data-bs-toggle="dropdown" id="profilebtn">pricing<i class="bi bi-chevron-down"></i></a>
+						<!-- <div class="dropdown-profile">
+							<a href="#" id="profile-btn">Change Profile</a>
+							<a data-toggle="modal" href="#usernameModal" id="usernamebtn">Change Username</a>
+							<a data-toggle="modal" href="#passwordModal" id="passwordbtn">Change Password</a>
+						</div> -->
+					</li>
+					<li class="right"><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="bi bi-list"></i></a></li>
+					<li class="right"><button type="submit" class="btn2 btnTry ">Try Whitepace free<i class="bi bi-arrow-right"></i></button></li>
+					<li class="right"><button class="loginBtn" type="submit" >Login</button></li>
 				</ul>
 			</nav>
 			<!-- welcome -->
 			<div class="welcome">
 				<div class="row">
 					<div class="col-md-6 col-sm-12">
-						<h1>get more done with whitepace</h1>
-						<p>Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks</p>
-						<button class="btnTry">Try Whitepace free<i class="bi bi-arrow-right"></i></button>
+						<div class="yellow">
+							<h1 class="heading">get more done with whitepace</h1>
+							<p>Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks</p>
+							<button class="btnTry">Try Whitepace free<i class="bi bi-arrow-right"></i></button>
+						</div>
 					</div>
 					<div class="col-md-6 col-sm-12">
 						<img src="Images/Image-container.png">
@@ -62,8 +69,8 @@
 			<div class="row">
 				<div class="col-md-5 col-sm-12">
 					<div class="yellow">
-						<img  src="Images/Yellow-line.png">
-						<h1>Project Management</h1>
+						<img   src="Images/Yellow-line.png">
+						<h1 class="heading">Project Management</h1>
 						<p>Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note.</p>
 						<button class="btnTry">Get Started<i class="bi bi-arrow-right"></i></button>
 					</div>
@@ -80,7 +87,7 @@
 					<div class="col-md-6 col-sm-12">
 						<div class="yellow">
 							<img  src="Images/Yellow-line.png">
-							<h1>Work together</h1>
+							<h1 class="heading">Work together</h1>
 							<p style="margin-left: 40px;">With whitepace, share your notes with your colleagues and collaborate on them.
 							You can also publish a note to the internet and share the URL with others.
 							</p>
@@ -98,7 +105,7 @@
 					<div class="col-md-6 col-sm-12">
 						<div class="yellow">
 							<img  src="Images/Yellow-line.png">
-							<h1>Use as Extension</h1>
+							<h1 class="heading">Use as Extension</h1>
 							<p>Use the web clipper extension, available on Chrome and Firefox, to save web pages or take screenshots as notes.</p>
 							<button class="btnTry">Let's Go<i class="bi bi-arrow-right"></i></button>
 						</div>
@@ -119,7 +126,7 @@
 				<div class="col-md-6 col-sm-12">
 					<div class="yellow">
 						<img  src="Images/Yellow-line.png">
-						<h1>Customise it to your needs</h1>
+						<h1 class="heading">Customise it to your needs</h1>
 						<p>Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API.
 						</p>
 						<button class="btnTry">Let's Go<i class="bi bi-arrow-right"></i></button>
@@ -131,12 +138,12 @@
 		<div class="plan-title">
 			<div class="yellow">
 				<img  src="Images/Yellow-line.png">
-				<h1>Choose Your Plan</h1>
+				<h1 class="heading">Choose Your Plan</h1>
 				<p>Whether you want to get organized, keep your personal life on track, or boost workplace productivity, Evernote has the right plan for you.</p>
 			</div>
 		</div>
 		<div class="plan-details">
-			<div class="row">
+			<div class="row slider-plan">
 			  <div class="col-md-4 col-sm-12">
 			    <div class="card">
 			      <div class="card-body">
@@ -192,8 +199,8 @@
 		<div class="container">
 			<div class="extension-work">
 				<div class="yellow">
-					<img  src="Images/Yellow-line.png">
-					<h1>Your work, everywhere you are</h1>
+					<!-- <img  src="Images/Blue-line.png"> -->
+					<h1 class="heading">Your work, everywhere you are</h1>
 					<p>Access your notes from your computer, phone or tablet by synchronising with various services, including whitepace, Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!</p>
 					<button class="btnTry">Try Taskey<i class="bi bi-arrow-right"></i></button>
 				</div>
@@ -201,17 +208,17 @@
 		</div>
 	</div>
 	<div class="container">
-		<div class="work-together">
-			<div class="row ">
-				<div class="col-md-5 col-sm-12">
+		<div class="data">
+			<div class="row">
+				<div class="col-md-6 col-sm-12">
 					<div class="yellow">
 						<img  src="Images/Yellow-line.png">
-						<h1>100% your data</h1>
-						<p style="margin-left: 40px;">The app is open source and your notes are saved to an open format, so you'll always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but yourself can access them.</p>
+						<h1 class="heading">100% your data</h1>
+						<p>The app is open source and your notes are saved to an open format, so you'll always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but yourself can access them.</p>
 						<button class="btnTry">Read more<i class="bi bi-arrow-right"></i></button>
 					</div>
 				</div>
-				<div class="col-md-7 col-sm-12">
+				<div class="col-md-6 col-sm-12">
 					<img src="Images/Element.png" >
 				</div>
 			</div>
@@ -219,7 +226,7 @@
 		<div class="sponsors">
 			<div class="yellow">
 				<img  src="Images/Yellow-line.png">
-				<h1>Our Sponsors</h1>
+				<h1 class="heading">Our Sponsors</h1>
 			</div>
 			<div class="row">
 				<div class="col-md-2 col-sm-12">
@@ -245,7 +252,7 @@
 						<img src="Images/Apps.png">
 					</div>
 					<div class="col-md-7 col-sm-12">
-						<h1>Work with Your Favorite Apps Using whitepace</h1>
+						<h1 class="heading">Work with Your Favorite Apps Using whitepace</h1>
 						<p>Whitepace teams up with your favorite software. Integrate with over 1000+ apps with Zapier to have all the tools you need for your project success.
 							</p>
 						<button class="btnTry">Read more<i class="bi bi-arrow-right"></i></button>
@@ -258,7 +265,7 @@
 		<div class="clients-feedback">
 			<div class="yellow">
 				<img  src="Images/Yellow-line.png">
-				<h1>What our clients says</h1>
+				<h1 class="heading text-capitalize">What our clients says</h1>
 			</div>
 			<div class="feedback">
 				<div class="row slider">
@@ -341,18 +348,19 @@
 	<div class="extension">
 		<div class="container">
 			<div class="footer-info">
-				<h1>Try Whitepace today</h1>
+				<h1 class="heading">Try Whitepace today</h1>
 				<p>Get started for free.</p><p>Add your whole team as your needs grow.</p>
 					<button class="btnTry">Try Taskey free<i class="bi bi-arrow-right"></i></button>
 				<p>On a big team? Contact sales</p>
+				<p><img src="Images/App-icon.png"></p>
 			</div>
 			<div class="footer">
 				<div class="row">
-					<div class="col-md-3 col-sm-12">
-						<h3>whitepace</h3>
+					<div class="col-lg-3 col-md-12  col-sm-12">
+						<h3><img src="Images/Logo.png"></h3>
 						<p class="footer-titlePara">whitepace was created for the new ways we live and work. We make a better workspace around the world</p>
 					</div>
-					<div class="col-md-2 col-sm-12">
+					<div class="col-lg-2 col-md-12 col-sm-12">
 						<ul>
 							<li><h5>product</h5></li>
 							<li>overview</li>
@@ -360,7 +368,7 @@
 							<li>customer stories</li>
 						</ul>
 					</div>
-					<div class="col-md-2 col-sm-12">
+					<div class="col-lg-2 col-md-12 col-sm-12">
 						<ul>
 							<li><h5>resource</h5></li>
 							<li>blog</li>
@@ -368,7 +376,7 @@
 							<li>help center</li>
 						</ul>
 					</div>
-					<div class="col-md-3 col-sm-12">
+					<div class="col-lg-3 col-md-12 col-sm-12">
 						<ul>
 							<li><h5>company</h5></li>
 							<li>about us</li>
@@ -376,21 +384,34 @@
 							<li>media kit</li>
 						</ul>
 					</div>
-					<div class="col-md-2 col-sm-12">
+					<div class="start col-lg-2 col-md-12 col-sm-12">
 						<h3>Try It Today</h3>
-						<p style="margin-left: 0;">Get started for free.Add your whole team as your needs grow.</p>
-						<button class="btnTry">Start today<i class="bi bi-arrow-right"></i></button>
+						<p >Get started for free.Add your whole team as your needs grow.</p>
+						<button class="btnTry start">Start today<i class="bi bi-arrow-right"></i></button>
 					</div>
 				</div>
 				<hr>
 				<div class="footer-list">
-					<ul>
-						<li>English</li>
-						<li>Terms & privacy</li>
-						<li>Security</li>
-						<li>Status</li>
-						<li>©2021 Whitepace LLC.</li>
-					</ul>
+					<div class="row">
+						<div class="col-md-2 col-lg-2 col-sm-12">
+							<i class="bi bi-globe"></i>English<i class="bi bi-chevron-down"></i>
+						</div>
+						<div class="col-md-2 col-lg-2 col-sm-12">
+							Terms & privacy
+						</div>
+						<div class="col-md-2 col-lg-2 col-sm-12">
+							Security
+						</div>
+						<div class="col-md-2 col-lg-2 col-sm-12">
+							Status
+						</div>
+						<div class="col-md-2 col-lg-2 col-sm-12">
+							©2021 Whitepace LLC.
+						</div>
+						<div class="col-md-2 col-lg-2 col-sm-12">
+								<img src="Images/Social Icon.png">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
