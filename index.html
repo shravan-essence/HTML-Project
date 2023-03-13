@@ -11,23 +11,24 @@
 	<!-- Bootstrap CDN link -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-	
 	<!--JQuery Slick plugin CDN link-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 	<!--JQuery Slick css plugin CDN link-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 	<!--JQuery Slick  css plugin CDN link-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-
+	<!--JQuery validation CDN links-->
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>	
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 </head>
 <body>
 	<div class="intro">
+		<img class="wave" src="Images/Wave.png">
 		<div class="container-xxl" id="con">
 			<nav class="nav text-uppercase" id="myTopnav">
 				<ul>
@@ -36,17 +37,67 @@
 					<li><a href="#about">solutions<i class="bi bi-chevron-down"></i></a></li>
 					<li><a href="#contact">resources<i class="bi bi-chevron-down"></i></a></li>
 					<li class="dropdown"><a href="#" class="dropbtn" data-bs-toggle="dropdown" id="profilebtn">pricing<i class="bi bi-chevron-down"></i></a>
-						<!-- <div class="dropdown-profile">
-							<a href="#" id="profile-btn">Change Profile</a>
-							<a data-toggle="modal" href="#usernameModal" id="usernamebtn">Change Username</a>
-							<a data-toggle="modal" href="#passwordModal" id="passwordbtn">Change Password</a>
-						</div> -->
 					</li>
 					<li class="right"><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="bi bi-list"></i></a></li>
 					<li class="right"><button type="submit" class="btn2 btnTry ">Try Whitepace free<i class="bi bi-arrow-right"></i></button></li>
-					<li class="right"><button class="loginBtn" type="submit" >Login</button></li>
+					<li class="right"><button class="loginBtn" data-toggle="modal" data-target="#loginModal" type="submit" >Login</button></li>
 				</ul>
 			</nav>
+			<!-- Login and Registration -->
+			<div class="login-modal">
+				<div class="modal fade" id="loginModal">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header text-center">
+								<h1 class="modal-title w-100">Login</h1>
+								<button type="button" data-dismiss="modal" class="btn close">X</button>
+							</div>
+							<div class="modal-body">
+								<form id="loginForm" method="POST" action="index.html">
+									<label for="username" class="form-text">Username</label>
+									<input type="text" name="username" id="username" class="form-control"><br>
+									<label for="pass" class="form-text">Password</label>
+									<input type="password" name="pass" id="pass" class="form-control"><br>
+								<a data-toggle="modal" href="#registerModal" data-dismiss="modal">Want to create account?</a>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="submit" class="btn btn-success" id="loginBtn">Submit</button>
+								</form><br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="register-modal">
+				<div class="modal fade" id="registerModal">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header text-center">
+								<h1 class="modal-title w-100">Register</h1>
+								<button type="button" data-dismiss="modal" class="btn close">X</button>
+							</div>
+							<div class="modal-body">
+								<form id="registerForm">
+									<label for="username" class="form-text">Username</label>
+									<input type="text" name="username" id="username" class="form-control"><br>
+									<label for="email" class="form-text">Email</label>
+									<input type="email" name="email" id="email" class="form-control"><br>
+									<label for="pass1" class="form-text">Password</label>
+									<input type="password" name="pass1" id="pass1" class="form-control"><br>
+									<label for="pass2" class="form-text">Confirm Password</label>
+									<input type="password" name="pass2" id="pass2" class="form-control"><br>
+								<a data-toggle="modal" href="#loginModal" data-dismiss="modal">Already have an account?</a>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="submit" class="btn btn-success" id="registerBtn" >Submit</button>
+								</form><br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<!-- welcome -->
 			<div class="welcome">
 				<div class="row">
@@ -64,6 +115,7 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="title">
 		<div class="container">
 			<div class="row">
@@ -81,14 +133,14 @@
 			</div>
 			<div class="work-together">
 				<div class="row">
-					<div class="col-md-6 col-sm-12">
+					<div class="col-md-6 col-sm-12 order-md-first order-last">
 						<img src="Images/Work-together-image.png" width="100px">
 					</div>
-					<div class="col-md-6 col-sm-12">
+					<div class="col-md-6 col-sm-12 ">
 						<div class="yellow">
 							<img  src="Images/Yellow-line.png">
 							<h1 class="heading">Work together</h1>
-							<p style="margin-left: 40px;">With whitepace, share your notes with your colleagues and collaborate on them.
+							<p>With whitepace, share your notes with your colleagues and collaborate on them.
 							You can also publish a note to the internet and share the URL with others.
 							</p>
 							<button class="btnTry">Try it now<i class="bi bi-arrow-right"></i></button>
@@ -172,7 +224,7 @@
 			        <p><img src="Images/Icon.png">Customize Home dashboard and access extra widgets</p>
 			        <p><img src="Images/Icon.png">Connect primary Google Calendar account</p>
 			        <p><img src="Images/Icon.png">Add due dates, reminders, and notifications to your tasks</p>
-			        <a href="#" class="btnTry selected">Get Started</a>
+			        <a href="#" class=" selected">Get Started</a>
 			      </div>
 			    </div>
 			  </div>
@@ -196,10 +248,11 @@
 		</div>
 	</div>
 	<div class="extension">
+		<img class="bg-img" src="Images/BACKGROUND.png">
 		<div class="container">
 			<div class="extension-work">
 				<div class="yellow">
-					<!-- <img  src="Images/Blue-line.png"> -->
+					<img  src="Images/Blue-line.png">
 					<h1 class="heading">Your work, everywhere you are</h1>
 					<p>Access your notes from your computer, phone or tablet by synchronising with various services, including whitepace, Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!</p>
 					<button class="btnTry">Try Taskey<i class="bi bi-arrow-right"></i></button>
@@ -210,7 +263,7 @@
 	<div class="container">
 		<div class="data">
 			<div class="row">
-				<div class="col-md-6 col-sm-12">
+				<div class="col-md-6 col-sm-12 order-md-first order-last">
 					<div class="yellow">
 						<img  src="Images/Yellow-line.png">
 						<h1 class="heading">100% your data</h1>
@@ -226,7 +279,7 @@
 		<div class="sponsors">
 			<div class="yellow">
 				<img  src="Images/Yellow-line.png">
-				<h1 class="heading">Our Sponsors</h1>
+				<h1 class="heading">Our sponsors</h1>
 			</div>
 			<div class="row">
 				<div class="col-md-2 col-sm-12">
@@ -245,6 +298,7 @@
 		</div>
 	</div>
 	<div class="extension">
+		<img class="wave" src="Images/Wave.png">
 		<div class="container">
 			<div class="favorite">
 				<div class="row">
@@ -330,10 +384,10 @@
 				        <p class="card-text">Whitepace is designed as a collaboration tool for businesses that is a full project management solution.</p>
 				        <hr>
 				        <div class="row clients">
-				        	<div class="col-sm-3">
+				        	<div class="col-sm-12 col-md-3">
 				        		<img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60">
 				        	</div>
-				        	<div class="col-sm-9">
+				        	<div class="col-sm-12 col-md-9">
 				        		<h4>Oberon Shaw, MCH</h4>
 				        		<p>Head of Talent Acquisition, North America</p>
 				        	</div>
@@ -347,12 +401,14 @@
 	</div>
 	<div class="extension">
 		<div class="container">
+			<div class="container footer-details">
 			<div class="footer-info">
 				<h1 class="heading">Try Whitepace today</h1>
 				<p>Get started for free.</p><p>Add your whole team as your needs grow.</p>
 					<button class="btnTry">Try Taskey free<i class="bi bi-arrow-right"></i></button>
 				<p>On a big team? Contact sales</p>
 				<p><img src="Images/App-icon.png"></p>
+			</div>
 			</div>
 			<div class="footer">
 				<div class="row">
@@ -405,10 +461,10 @@
 						<div class="col-md-2 col-lg-2 col-sm-12">
 							Status
 						</div>
-						<div class="col-md-2 col-lg-2 col-sm-12">
+						<div class="col-md-4 col-lg-2 col-sm-12">
 							©2021 Whitepace LLC.
 						</div>
-						<div class="col-md-2 col-lg-2 col-sm-12">
+						<div class="col-md-12 col-lg-2 col-sm-12">
 								<img src="Images/Social Icon.png">
 						</div>
 					</div>
@@ -416,6 +472,8 @@
 			</div>
 		</div>
 	</div>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+    </script>
 	<script type="text/javascript" src="base.js"></script>
 </body>
 </html>
