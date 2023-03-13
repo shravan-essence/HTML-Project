@@ -32,42 +32,42 @@ $('.slider').slick({
 	]
 });
 
+if ($(window).width() <=700){
+	$('.slider-plan').slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		arrows:false,
+		slidesToShow: 3,
+		responsive: [
+		{
+	 		breakpoint: 1024,
+					settings: {
+	 				slidesToShow: 3,
+	 				centerMode: true,
+       		centerPadding: '40px',
+	 				dots: true,
 
-	if ($(window).width() <=700){
-		$('.slider-plan').slick({
-			dots: false,
-			infinite: true,
-			speed: 300,
-			arrows:false,
-			slidesToShow: 3,
-			responsive: [
-			{
-		 		breakpoint: 1024,
-						settings: {
-		 				slidesToShow: 1,
-		 				slidesToScroll: 1,
-		 				infinite: true,
-		 				dots: true
-					}
-			},
-			{
-					breakpoint: 600,
-					settings: {
-		 				slidesToShow: 1,
-		 				slidesToScroll: 1
-					}
-				},
-			{
-				breakpoint: 480,
-					settings: {
-		 				slidesToShow: 1,
-		 				slidesToScroll: 1,
-		 				dots:false
-						}
 				}
-			]
-		});
-	}
+		},
+		{
+				breakpoint: 600,
+				settings: {
+	 				slidesToShow: 1,
+	 				slidesToScroll: 1
+				}
+			},
+		{
+			breakpoint: 480,
+				settings: {
+	 				slidesToShow: 1,
+	 				slidesToScroll: 1,
+	 				dots:false
+					}
+			}
+		]
+	});
+}
 
 function myFunction() {
   var x = document.getElementById("myTopnav");
@@ -221,4 +221,5 @@ $(document).ready(function(){
 	 			alert("Please enter valid credentials")
 	 		}
   	}
-  });});
+  });
+});
